@@ -3,13 +3,13 @@ import { View, FlatList } from 'react-native';
 import { connect } from 'react-redux';
 import ActivityItem from '../components/ActivityItem';
 import UserTextImageItem from '../components/UserTextImageItem';
-import { getActivities } from '../actions/activity.action';
+import { getActivities } from '../actions/activity.show.action';
 import AppHeaderBack from '../components/AppHeaderBack';
 import EmptyComponent from '../components/EmptyComponent';
 
 @connect((store) => {
     return {
-        data: store.activityReducer.activities
+        data: store.activityShowReducer.activities
     }
 })
 class ActivityShowList extends Component {
